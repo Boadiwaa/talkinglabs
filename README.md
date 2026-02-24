@@ -4,8 +4,6 @@
 
 TalkingLabs is a mobile health app that transforms lab reports into plain-language explanations with voice playback. Patients photograph or upload a saved copy of their lab report, and the app uses an on-device MedGemma model to extract values, flag abnormal results, and explain what they mean in English, French, or Akan.
 
-Built for [HAI-DEF Hackathon 2026](https://hai-def.org).
-
 ---
 
 ## The Problem
