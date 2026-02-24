@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "TalkingLabs",
+    "slug": "talkinglabs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4FAFA"
+    },
+    "autolinking": {
+      "nativeModulesDir": "./modules"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.talkinglabs.app"
+    },
+    "android": {
+      "package": "com.talkinglabs.app",
+      "largeHeap": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F4FAFA"
+      }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "llama.rn",
+        {
+          "ios": {
+            "enableMetal": true
+          }
+        }
+      ],
+      [
+        "./plugins/withModelAsset",
+        {
+          "modelPath": "models/medgemma-1.5-4b-it-Q3_K_M.gguf",
+          "mmprojPath": "models/mmproj-F16.gguf"
+        }
+      ],
+      "./plugins/withAppConfig",
+      "@react-native-community/datetimepicker"
+    ]
+  }
+}
