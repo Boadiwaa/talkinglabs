@@ -55,7 +55,6 @@ Everything runs **fully on-device** — no server, no cloud API, no internet req
 | **Trilingual TTS** | Listen to your explanation in English, French, or Akan. |
 | **Severity flags** | Color-coded: green (normal), amber (elevated), red (critical). |
 | **Trend tracking** | Chart your lab values over time. See if things are getting better or worse. |
-| **Fully offline** | MedGemma runs on your device via `llama.rn`. No data ever leaves the phone. |
 | **3-tier parsing** | MedGemma vision → OCR + MedGemma text → regex fallback ensures reliable extraction even on low-end devices. |
 
 ---
@@ -173,32 +172,12 @@ npx expo run:ios   # or: npx expo run:android
 
 ---
 
-## Project Structure Notes
+##  Copyright
+Copyright (c) 2026 [Paulina B. Mensah]. All rights reserved.
 
-- **Clinical reference ranges** live exclusively in `src/domain/reference_ranges.js` — never hardcoded elsewhere.
-- **Mock data** for UI development lives in `src/data/mockData.js`.
-- **LLM prompts** live in `prompts/` — never inlined in agent code.
-- **Models** (~3 GB) are gitignored. See `scripts/download-models.sh`.
+This software and its source code are proprietary. No user is granted 
+any license to use, copy, modify, merge, publish, distribute, sublicense, 
+or sell copies of this software, except as explicitly permitted under 
+the GitHub Terms of Service for viewing and forking.
 
----
 
-## Safety & Disclaimers
-
-This is a **prototype with mock data**. It is:
-- **Not** FDA-cleared or CE-marked medical software
-- **Not** a substitute for professional clinical judgment
-- **Not** HIPAA-compliant (demo encryption only)
-
-Every AI-generated explanation includes: *"Please consult your healthcare provider for clinical decisions."*
-
----
-
-## Technical Write-up
-
-For the full hackathon technical write-up including MedGemma usage rationale, deployment challenges, and impact analysis, see the submission document.
-
----
-
-## License
-
-MIT — see LICENSE.
